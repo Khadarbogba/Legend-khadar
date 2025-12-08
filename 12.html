@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Muxiyadiin General Hospital</title>
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Dr. Muxiyadiin General Hospital — adeegyo caafimaad 24/7: baadhitaan, qalliino, pediatrics iyo daryeel degdeg ah." />
+  <meta name="author" content="Dr. Muxiyadiin General Hospital" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Geo + structured data -->
+  <meta name="geo.position" content="9.297305;40.837197" />
+  <meta name="geo.placename" content="Dr. Muxiyadiin General Hospital" />
+  <meta name="geo.region" content="ET" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    "name": "Dr. Muxiyadiin General Hospital",
+    "image": "https://via.placeholder.com/1200x800?text=Dr.+Muxiyadiin+Hospital",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "East Hararghe",
+      "addressCountry": "Ethiopia"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 9.297305,
+      "longitude": 40.837197
+    },
+    "url": "https://your-website-url.com",
+    "telephone": "+251913544464"
+  }
+  </script>
+
+  <!-- Simple font fallback, system fonts for speed -->
+  <style>
+    :root{
+      --bg:#f2f4fa;
+      --accent:#0a94d9;
+      --muted:#7b8798;
+      --text:#1f2733;
+      --card-w:360px;
+      --card-h:460px;
+      --max-width:1100px;
+      --radius:12px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Header */
+    header{
+      position:fixed;left:0;right:0;top:0;
+      background:var(--accent);
+      color:#fff;padding:12px 20px;
+      display:flex;align-items:center;justify-content:space-between;
+      z-index:1200;box-shadow:rgba(0,0,0,0.06) 0 4px 12px;
+    }
+    .logo{font-weight:700}
+    nav{display:flex;gap:16px}
+    nav a{color:#fff;text-decoration:none;font-weight:600}
+    .menu-btn{display:none;font-size:22px;cursor:pointer;color:#fff}
+
+    /* Hero */
+    .hero{
+      height:80vh;
+      margin-top:68px;
+      background:linear-gradient(0deg, rgba(0,0,0,0.32), rgba(0,0,0,0.12)),
+                 url("https://img.freepik.com/free-photo/hospital-building-modern-architecture_1127-3391.jpg") center/cover no-repeat;
+      display:flex;align-items:center;padding:40px 20px;
+    }
+    .hero-text{max-width:700px;color:#fff}
+    .hero-text h1{font-size:clamp(26px,4vw,48px);margin-bottom:10px}
+    .hero-text p{opacity:.95;margin-bottom:16px}
+    .btn1{background:var(--accent);color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;display:inline-block}
+
+    /* Container */
+    .container{max-width:var(--max-width);margin:40px auto;padding:0 16px}
+
+    /* Map */
+    .map-wrap iframe{width:100%;height:320px;border:0;border-radius:10px;margin-top:20px}
+
+    /* Doctors carousel basic styling (kept from original but simplified) */
+    .wrap{position:relative;margin:28px auto;padding:16px 0; overflow-x:hidden;}
+    .bg-title{position:absolute;left:50%;transform:translateX(-50%);top:10px;font-size:96px;letter-spacing:8px;color:rgba(32,48,88,0.06);pointer-events:none;user-select:none}
+    .team-section{position:relative;padding-top:80px}
+    .stage{height:var(--card-h);display:flex;align-items:center;justify-content:center;perspective:1400px;overflow:visible}
+    .cards{position:relative;width:100%;display:flex;align-items:center;justify-content:center;gap:18px;transform-style:preserve-3d;pointer-events:none}
+    .card{--w:var(--card-w);--h:var(--card-h);width:var(--w);height:var(--h);background:#fff;border-radius:14px;box-shadow:0 18px 38px rgba(18,28,52,0.08);overflow:hidden;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;pointer-events:auto}
+    .card img{width:100%;height:62%;object-fit:cover;display:block}
+    .meta{padding:14px;text-align:center;margin-top:auto}
+    .meta h3{font-size:18px;margin-bottom:6px}
+    .meta p{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1.4px}
+
+    .btn{width:44px;height:44px;border-radius:999px;background:#fff;border:0;box-shadow:0 8px 16px rgba(18,28,52,0.08);display:flex;align-items:center;justify-content:center;cursor:pointer;position:absolute;top:50%;transform:translateY(-50%);z-index:5}
+    .btn-left{left:8px}.btn-right{right:8px}
+    .info{text-align:center;margin-top:18px}
+    .person-name{font-weight:800;color:#203057;font-size:22px}
+    .person-role{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:2px}
+
+    /* Services */
+    .section{text-align:center;padding:48px 20px}
+    .services-box{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:18px}
+    .service-card{width:280px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 12px 28px rgba(18,28,52,0.06)}
+    .service-card img{width:100%;height:170px;object-fit:cover;border-radius:8px}
+
+    /* Contact */
+    .contact form{max-width:520px;margin:18px auto;display:flex;flex-direction:column;gap:12px}
+    .contact input,.contact textarea{padding:12px;border-radius:8px;border:1px solid #d6d9df;font-size:15px}
+    .contact textarea{min-height:120px;resize:vertical}
+    .form-note{font-size:14px;color:var(--muted);text-align:center;margin-top:8px}
+    .toast{display:none;max-width:520px;margin:10px auto;padding:12px;border-radius:8px;background:#e6f7ec;color:#0a6b2d;border:1px solid rgba(10,150,80,0.12);text-align:center}
+
+    /* WhatsApp floating */
+    .whatsapp-btn{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:14px;border-radius:50%;font-size:20px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,0.18);z-index:1300}
+
+    footer{background:var(--accent);color:#fff;padding:18px;text-align:center;margin-top:28px;border-radius:8px 8px 0 0}
+
+    /* Responsive */
+    @media (max-width:960px){
+      .bg-title{font-size:72px}
+      nav{display:none}
+      .menu-btn{display:block}
+      .btn-left{left:0}.btn-right{right:0}
+      :root{--card-w:300px;--card-h:420px}
+      .service-card{
+    width:93%;
+    
+  }
+  .service-card img {
+    height:82%;
+  }
+    }
+    @media (max-width:640px){
+      .bg-title{display:none}
+      :root{--card-w:260px;--card-h:380px}
+      .services-box{flex-direction:column;align-items:center}
+      .hero{height:58vh;padding:24px}
+    }
+
+    /* Small helper */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    a:focus,a:active,input:focus,button:focus{outline:3px solid rgba(10,148,217,0.18);outline-offset:2px}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Dr. Muxiyadiin General Hospital</div>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Bogga Hore</a>
+      <a href="#services">Adeegyada</a>
+      <a href="#doctors">Dhakhaatiirta</a>
+      <a href="#contact">Nala Soo Xariir</a>
+    </nav>
+    <div class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero" role="region" aria-labelledby="heroTitle">
+    <div class="hero-text container">
+      <h1 id="heroTitle">Daryeel Caafimaad oo Lagu Kalsoonaan Karo</h1>
+      <p>Waxaan bixinaa adeeg caafimaad oo tayo sare leh 24/7 — ballan qaado maanta ama nagala soo xiriir.</p>
+      <a class="btn1" href="#contact">Samee Ballan</a>
+    </div>
+  </section>
+
+  <div class="container map-wrap" aria-hidden="false">
+    <iframe
+      title="Goobta Dr. Muxiyadiin General Hospital — Google Maps"
+      src="https://www.google.com/maps?q=9.297305,40.837197&hl=so&z=14&output=embed"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- DOCTORS -->
+  <div class="container wrap" id="doctors">
+    <div class="bg-title" aria-hidden="true">OUR TEAM</div>
+
+    <section class="team-section" aria-labelledby="teamTitle">
+      <h2 id="teamTitle" class="sr-only">Kooxda Dhakhaatiirta</h2>
+
+      <div class="stage" aria-hidden="false">
+        <div class="cards" id="cards">
+          <div class="card" data-name="Dr. Muxiyadiin" data-role="Takhasusle Guud">
+            <img loading="lazy" src="2.jpg" alt="Dr. Muxiyadiin">
+            <div class="meta"><h3>Dr. Muxiyadiin</h3><p>Takhasusle Guud</p></div>
+          </div>
+
+          <div class="card" data-name="Dr. Hani Maxamed" data-role="Takhasusle Carruurta">
+            <img loading="lazy" src="1.jpg" alt="Dr. Hani Maxamed">
+            <div class="meta"><h3>Dr. Hani Maxamed</h3><p>Takhasusle Carruurta</p></div>
+          </div>
+
+          <div class="card" data-name="Khadar Maxamed" data-role="Developer">
+            <img loading="lazy" src="3.jpg" alt="Khadar Maxamed">
+            <div class="meta"><h3>Khadar Maxamed</h3><p>Developer</p></div>
+          </div>
+
+          <div class="card" data-name="Dr. Khalid Cali" data-role="Surgeon">
+            <img loading="lazy" src="4.jpg" alt="Dr. Khalid Cali">
+            <div class="meta"><h3>Dr. Khalid Cali</h3><p>Qalliinka (Surgeon)</p></div>
+          </div>
+
+          <div class="card" data-name="Dr. Tylose" data-role="Data Analyst">
+            <img loading="lazy" src="5.jpg" alt="Dr. Tylose">
+            <div class="meta"><h3>Dr. Tylose</h3><p>Data Analyst</p></div>
+          </div>
+        </div>
+
+        <button class="btn btn-left" id="prev" aria-label="Ka horeeya">‹</button>
+        <button class="btn btn-right" id="next" aria-label="Xiga">›</button>
+      </div>
+
+      <div class="info" aria-live="polite">
+        <div class="person-name" id="personName">Dr. Muxiyadiin</div>
+        <div class="person-role" id="personRole">Takhasusle Guud</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="section" role="region" aria-labelledby="servicesTitle">
+    <h2 id="servicesTitle">Adeegyada Caafimaad ee Aan Bixino</h2>
+    <div class="services-box">
+      <div class="service-card">
+        <img src="https://img.freepik.com/free-vector/hospital-building-concept-illustration_114360-8991.jpg" alt="">
+        <h3>Baadhista Guud</h3>
+        <p>Baadhitaan buuxa oo casri ah oo lagu sameeyo qalab tayo sare leh.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.freepik.com/free-vector/medical-diagnostic-concept-illustration_114360-5874.jpg" alt="">
+        <h3>Daryeel Degdeg Ah</h3>
+        <p>Adeegyada gargaarka degdegga ah 24/7 oo ay bixiyaan dhakhaatiir khibrad leh.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg" alt="">
+        <h3>Caruurta (Pediatrics)</h3>
+        <p>Daryeel khaas ah oo loogu talagalay dhallaanka, carruurta iyo dhallinyarada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact" role="region" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">Nala Soo Xariir</h2>
+
+    <form id="contactForm" novalidate>
+      <input id="name" name="name" type="text" placeholder="Magacaaga" required aria-label="Magacaaga">
+      <input id="email" name="email" type="email" placeholder="Email-kaaga" required aria-label="Email-kaaga">
+      <input id="phone" name="phone" type="tel" placeholder="Lambarkaaga (+252...)" pattern="^\+?\d{7,15}$" required aria-label="Lambarkaaga">
+      <textarea id="mssg" name="mssg" placeholder="Fariintaada" required aria-label="Fariintaada"></textarea>
+      <button type="submit" class="btn1">Dir Fariinta</button>
+    </form>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <p class="form-note">Ama isticmaal botankan si toos ah: <a href="https://wa.me/251913544464" target="_blank" rel="noopener">WhatsApp</a></p>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/251913544464" target="_blank" rel="noopener" aria-label="WhatsApp Chat">💬</a>
+
+  <footer>
+    <p>© <span id="year"></span> Dr. Muxiyadiin General Hospital — Xuquuqda waa la ilaaliyay.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // small helpers
+    function $(sel){return document.querySelector(sel)}
+    function $all(sel){return Array.from(document.querySelectorAll(sel))}
+
+    // mobile menu
+    function toggleMenu(){
+      const nav = document.getElementById('mainNav');
+      const btn = document.getElementById('menuBtn');
+      nav.classList.toggle('show');
+      btn.setAttribute('aria-expanded', nav.classList.contains('show'));
+    }
+
+    // smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+          // close mobile menu if open
+          const nav = document.getElementById('mainNav');
+          if(nav.classList.contains('show')) nav.classList.remove('show');
+        }
+      });
+    });
+
+    // Doctors carousel (kept compact and robust)
+    (function(){
+      const cards = $all('.card');
+      const prevBtn = $('#prev');
+      const nextBtn = $('#next');
+      const nameEl = $('#personName');
+      const roleEl = $('#personRole');
+      const total = cards.length;
+      let index = 0;
+
+      // create simple dots if wanted - omitted to keep UI clean
+
+      function render(){
+        const active = cards[index];
+        nameEl.textContent = active.dataset.name || active.querySelector('h3').textContent;
+        roleEl.textContent = active.dataset.role || active.querySelector('p').textContent;
+
+        cards.forEach((card,i)=>{
+          let diff = i - index;
+          if(diff > total/2) diff -= total;
+          if(diff < -total/2) diff += total;
+          const abs = Math.abs(diff);
+          let opacity=0, z=10, filter='blur(14px) grayscale(.2)', scale=0.7;
+          const baseY = -6 * Math.abs(diff);
+          const rotateY = diff * 14;
+          const translateX = diff * 220;
+          const translateZ = -Math.abs(diff) * 80;
+
+          if(abs === 0){ opacity=1; z=200; filter='blur(0px)'; scale=1; }
+          else if(abs === 1){ opacity=0.95; z=80; filter='blur(4px)'; scale=0.9; }
+          else if(abs === 2){ opacity=0.65; z=60; filter='blur(8px)'; scale=0.8; }
+          else { opacity=0; z=10; }
+
+          const t = `translate3d(${translateX}px, ${baseY}px, ${translateZ}px) rotateY(${rotateY}deg) scale(${scale}) translate(-50%,-50%)`;
+          card.style.transform = t;
+          card.style.opacity = opacity;
+          card.style.zIndex = z;
+          card.style.filter = filter;
+        });
+      }
+
+      function next(){ index = (index + 1) % total; render(); }
+      function prev(){ index = (index - 1 + total) % total; render(); }
+      nextBtn.addEventListener('click', next);
+      prevBtn.addEventListener('click', prev);
+      window.addEventListener('keydown', e => { if(e.key==='ArrowRight') next(); if(e.key==='ArrowLeft') prev(); });
+      cards.forEach((c,i)=> c.addEventListener('click', ()=> { index = i; render(); }));
+
+      // autoplay
+      let timer = setInterval(next, 2400);
+      const stage = document.querySelector('.stage');
+      stage.addEventListener('mouseenter', ()=> clearInterval(timer));
+      stage.addEventListener('mouseleave', ()=> timer = setInterval(next, 2400));
+
+      render();
+    })();
+
+    // contact form -> open WhatsApp with formatted message + validation + toast
+    (function(){
+      const form = $('#contactForm');
+      const toast = $('#toast');
+      const WA_NUMBER = '251913544464'; // use number without plus
+      function showToast(text, success=true){
+        toast.textContent = text;
+        toast.style.display = 'block';
+        toast.style.background = success ? '#e6f7ec' : '#ffeceb';
+        toast.style.color = success ? '#0a6b2d' : '#a12a2a';
+        setTimeout(()=>{ toast.style.display = 'none'; }, 4500);
+      }
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const name = $('#name').value.trim();
+        const email = $('#email').value.trim();
+        const phone = $('#phone').value.trim();
+        const mssg = $('#mssg').value.trim();
+
+        // minimal validation
+        if(!name || !email || !phone || !mssg){
+          showToast('Fadlan buuxi dhammaan goobaha la doonayo.', false);
+          return;
+        }
+        // simple email pattern
+        const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!emailRe.test(email)){
+          showToast('Fadlan geli email sax ah.', false);
+          return;
+        }
+        // phone sanitize: keep digits and plus
+        const phoneDigits = phone.replace(/[^+\d]/g, '');
+        // Build message
+        const message =
+`Magac: ${name}
+Email: ${email}
+Phone: ${phoneDigits}
+Fariin: ${mssg}`;
+
+        // open WhatsApp in new tab (web or app will handle)
+        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+
+        // show local success and reset (keep user experience)
+        showToast('Fariinta waa la diyaariyey — WhatsApp ayaa soo furan doona.', true);
+        form.reset();
+      });
+    })();
+
+    // Fill copyright year
+    (function(){ $('#year').textContent = new Date().getFullYear(); })();
+  </script>
+</body>
+</html>
